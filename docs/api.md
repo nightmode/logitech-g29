@@ -138,8 +138,8 @@ Can be specified before or after a `connect(callback)`.
 
 ```js
 g.once('pedals-gas', function(val) {
-	// the following message will only be displayed once
-  console.log('Powered by dead dinosaur juice; your engine roars to life!')
+    // the following message will only be displayed once
+    console.log('Powered by dead dinosaur juice, your engine roars to life!')
 })
 ```
 
@@ -177,7 +177,7 @@ Turn off all force effects except auto-centering.
 
 `leds()` or `leds(number)` or `leds(string)` or `leds(array)`
 
-The shift indicator LEDs can interfaced with in a variety of ways.
+The shift indicator LEDs can be interfaced with in a variety of ways.
 
 `led()` is the easiest way to turn off all LEDs.
 
