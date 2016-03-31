@@ -1,0 +1,28 @@
+{
+  "name": "logitech-g29",
+  "version": "0.1.0",
+  "description": "Logitech G29 Racing Wheel for Node",
+  "license": "MIT",
+  "author": "Daniel Gagan",
+  "repository": {
+    "type": "git",
+    "url": "git://github.com/ForestMist/logitech-g29.git"
+  },
+  "main": "./code/index.js",
+  "dependencies": {
+    "chalk": "1.1.3",
+    "node-hid": "0.5.1"
+  },
+  "engines": {
+    "node": ">=4.0.0"
+  },
+  "scripts": {
+    "test": "node test/test.js"
+  },
+  "keywords": [
+    "logitech",
+    "g29",
+    "racing wheel",
+    "hid"
+  ]
+}
