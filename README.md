@@ -13,6 +13,8 @@ Bring your [Logitech G29 Racing Wheel](http://gaming.logitech.com/en-us/product/
 
 [Node](https://nodejs.org/en/) version 4.0.0 or greater.
 
+Make sure your wheel's [platform mode switch](http://support.logitech.com/en_us/article/Set-the-G29-racing-wheel-for-Playstation-4-Playstation-3-or-PC-platforms?product=a0qi0000006PmxKAAS) is set to PS3.
+
 ## Install
 
 This library uses [node-hid](https://github.com/node-hid/node-hid) behind the scenes. Node 4 users should have an effortless install. Node 5 users may want to consult node-hid's [compiling from source](https://github.com/node-hid/node-hid#compiling-from-source) guide for anything more serious than a warning.
