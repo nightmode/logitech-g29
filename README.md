@@ -66,7 +66,7 @@ Want to help even more? Here are some ideas to get you started.
 * [Report any issues](https://github.com/ForestMist/logitech-g29/issues) on GitHub.
 * Donate [hamburgers and root beer](https://cash.me/$ForestMist).
 * Share this library with other Logitech loving folks.
-* Contact [Daniel](https://forestmist.org/about/) with improvement ideas and/or send a [pull request](https://github.com/ForestMist/feri/pulls).
+* Contact [Daniel](https://forestmist.org/about/) with improvement ideas and/or send a [pull request](https://github.com/ForestMist/logitech-g29/pulls).
 * Hook up your G29 wheel to something on the internet and wow the IoT community.
 * Offer Daniel a full-time position which will help fund this and future open source projects.
 
