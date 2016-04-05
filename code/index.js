@@ -447,7 +447,7 @@ function listen(ready, callback) {
                     if (!memoryDiff.hasOwnProperty(o)) {
                         memoryDiff[o] = {}
                     }
-                    eventEmitter.emit(o + '-' + y, memory[o][y]) // for example, wheel-button_1
+                    eventEmitter.emit(o + '-' + y, memory[o][y]) // for example, wheel-turn
                     memoryDiff[o][y] = memory[o][y]
                     count = count + 1
                 }
