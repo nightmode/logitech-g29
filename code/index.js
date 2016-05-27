@@ -153,7 +153,8 @@ function findWheel() {
     var devicePath = ''
 
     for (var i in devices) {
-        if (devices[i].product === 'G29 Driving Force Racing Wheel') {
+        if (devices[i].product === 'G29 Driving Force Racing Wheel' ||
+           (devices[i].vendorId === 1133 && devices[i].productId === 49743)) {
             devicePath = devices[i].path
             break
         }
