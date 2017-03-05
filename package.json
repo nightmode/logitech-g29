@@ -1,6 +1,6 @@
 {
   "name": "logitech-g29",
-  "version": "1.0.3",
+  "version": "1.0.4",
   "description": "Logitech G29 Racing Wheel for Node",
   "license": "MIT",
   "author": "Daniel Gagan",
