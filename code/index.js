@@ -120,8 +120,8 @@ function connect(odo, callback) { // Constable Odo takes many forms.
 
                 try {
                     // G29 Wheel init from - https://github.com/torvalds/linux/blob/master/drivers/hid/hid-lg4ff.c
-                    device.write([0xf8, 0x0a, 0x00, 0x00, 0x00, 0x00, 0x00])
-                	device.write([0xf8, 0x09, 0x05, 0x01, 0x01, 0x00, 0x00])
+                    device.write([0x00, 0xf8, 0x0a, 0x00, 0x00, 0x00, 0x00, 0x00])
+                    device.write([0x00, 0xf8, 0x09, 0x05, 0x01, 0x01, 0x00, 0x00])
 
                     // wait for wheel to finish calibrating
                     setTimeout(function() {
@@ -153,8 +153,11 @@ function findWheel() {
     var devicePath = ''
 
     for (var i in devices) {
-        if (devices[i].product === 'G29 Driving Force Racing Wheel' ||
-           (devices[i].vendorId === 1133 && devices[i].productId === 49743)) {
+        // devices[i].product will be set to 'G29 Driving Force Racing Wheel' on Windows and Mac. Linux will not have this key.
+        // devices[i].interface should be 0 on Windows and Linux.
+        // devices[i].usagePage should be 1 on Windows and Mac.
+        if (devices[i].vendorId === 1133 && devices[i].productId === 49743 &&
+            (devices[i].interface === 0 || devices[i].usagePage === 1)) {
             devicePath = devices[i].path
             break
         }
@@ -183,7 +186,7 @@ function once(str, func) {
 function relay(data) {
     /*
     Relay low level commands directly to the hardware.
-    @param  {Object}  data  Array of data to write. For example: [0xf8, 0x12, 0x1f, 0x00, 0x00, 0x00, 0x01]
+    @param  {Object}  data  Array of data to write. For example: [0x00, 0xf8, 0x12, 0x1f, 0x00, 0x00, 0x00, 0x01]
     */
     if (Array.isArray(data)) {
         device.write(data)
@@ -205,7 +208,7 @@ function setRange() {
     var range1 = options.range & 0x00ff
     var range2 = (options.range & 0xff00) >> 8
 
-    device.write([0xf8, 0x81, range1, range2, 0x00, 0x00, 0x00])
+    device.write([0x00, 0xf8, 0x81, range1, range2, 0x00, 0x00, 0x00])
 } // setRange
 
 function userOptions(opt) {
@@ -303,7 +306,7 @@ function leds(setting) {
         */
 
         try {
-            device.write([0xf8, 0x12, setting, 0x00, 0x00, 0x00, 0x01])
+            device.write([0x00, 0xf8, 0x12, setting, 0x00, 0x00, 0x00, 0x01])
 
             // update global variable for next time
             ledPrev = setting
@@ -324,7 +327,7 @@ function autoCenter() {
 
     if (option) {
         // auto-center on
-        device.write([0x14, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00])
+        device.write([0x00, 0x14, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00])
 
         if (Array.isArray(option) && option.length === 2) {
             // custom auto-center
@@ -335,14 +338,14 @@ function autoCenter() {
             // byte 5 is the rate the effect strength rises as the wheel turns, 0x00 to 0xff
             option[1] = Math.round(option[1] * 255)
 
-            device.write([0xfe, 0x0d, option[0], option[0], option[1], 0x00, 0x00, 0x00])
+            device.write([0x00, 0xfe, 0x0d, option[0], option[0], option[1], 0x00, 0x00, 0x00])
         } else {
             // use default strength profile
-            device.write([0xfe, 0x0d, 0x07, 0x07, 0xff, 0x00, 0x00, 0x00])
+            device.write([0x00, 0xfe, 0x0d, 0x07, 0x07, 0xff, 0x00, 0x00, 0x00])
         }
     } else {
         // auto-center off
-        device.write([0xf5, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00])
+        device.write([0x00, 0xf5, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00])
     }
 } // autoCenter
 
@@ -360,7 +363,7 @@ function forceConstant(number) {
 
     number = Math.round(Math.abs(number - 1) * 255)
 
-    device.write([0x11, 0x00, number, 0x00, 0x00, 0x00, 0x00])
+    device.write([0x00, 0x11, 0x00, number, 0x00, 0x00, 0x00, 0x00])
 } // forceConstant
 
 function forceFriction(number) {
@@ -377,7 +380,7 @@ function forceFriction(number) {
 
     number = Math.round(number * 15)
 
-    device.write([0x21, 0x02, number, 0x00, number, 0x00, 0x00])
+    device.write([0x00, 0x21, 0x02, number, 0x00, number, 0x00, 0x00])
 } // forceFriction
 
 function forceOff(slot) {
@@ -391,12 +394,13 @@ function forceOff(slot) {
     } else {
         if (slot === 0) {
             slot = 0xf3
+        } else {
+            slot = parseInt('0x' + slot + '0')
         }
-        slot = parseInt('0x' + slot + '0')
     }
 
     // turn off effects (except for auto-center)
-    device.write([slot, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00])
+    device.write([0x00, slot, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00])
 } // forceOff
 
 //------------------
