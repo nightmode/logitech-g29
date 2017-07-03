@@ -17,7 +17,7 @@ Make sure your wheel's [platform mode switch](http://support.logitech.com/en_us/
 
 ## Install
 
-This library uses [node-hid](https://github.com/node-hid/node-hid) behind the scenes. Node 4 users should have an effortless install. Node 5 users may want to consult node-hid's [compiling from source](https://github.com/node-hid/node-hid#compiling-from-source) guide for anything more serious than a warning.
+This library uses [node-hid](https://github.com/node-hid/node-hid) behind the scenes. If your OS and Node version are listed under [platform support](https://github.com/node-hid/node-hid/blob/master/README.md#platform-support) then you'll have the easiest install experience. If not, you may need to consult node-hid's [compiling from source](https://github.com/node-hid/node-hid#compiling-from-source) guide.
 
 ```
 npm install logitech-g29
