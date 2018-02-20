@@ -400,8 +400,12 @@ function forceFriction(number) {
         return
     }
 
-    number = Math.round(number * 15)
+    // sending manual relay() commands to the hardware seems to reveal a 0x00 through 0x07 range
+    // 0x07 is the strongest friction and then 0x08 is no friction
+    // friction ramps up again from 0x08 to 0x0F
+    number = Math.round(number * 7)
 
+    // the first "number" is for left rotation, the second for right rotation
     relayOS([0x21, 0x02, number, 0x00, number, 0x00, 0x00])
 } // forceFriction
 
