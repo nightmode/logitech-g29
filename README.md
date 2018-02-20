@@ -62,6 +62,7 @@ Vroom vroom sounds optional but encouraged. ^\_^
 * [advanced](docs/api.md#advanced)
   * [emitter](docs/api.md#emitter)
   * [relay](docs/api.md#relay)
+  * [relayOS](docs/api.md#relayos)
 
 ## Contribute
 

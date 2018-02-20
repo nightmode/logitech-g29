@@ -541,3 +541,4 @@ module.exports.forceOff = forceOff
 
 // advanced
 module.exports.relay = relay
+module.exports.relayOS = relayOS

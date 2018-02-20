@@ -15,6 +15,7 @@
 * [advanced](#advanced)
   * [emitter](#emitter)
   * [relay](#relay)
+  * [relayOS](#relayos)
 
 ## connect
 
@@ -232,6 +233,17 @@ Relay low level commands directly to the hardware.
 ```js
 // turn on all LEDs
 g.relay([0x00, 0xf8, 0x12, 0x1f, 0x00, 0x00, 0x00, 0x01])
+```
+
+### relayOS
+
+`relayOS(data)`
+
+Relay low level commands directly to the hardware after applying OS specific tweaks, if needed.
+
+```js
+// turn on all LEDs
+g.relayOS([0xf8, 0x12, 0x1f, 0x00, 0x00, 0x00, 0x01])
 ```
 
 ## License
