@@ -105,9 +105,9 @@ g.on('wheel-turn', function(val) {
 
 |Event|Returns|Values|Notes|
 |:--|:--|:--|:--|
-|`pedals-gas`|number|0 - 100|0 is no pressure and 100 is fully pressed.|
-|`pedals-brake`|number|0 - 100|0 is no pressure and 100 is fully pressed.|
-|`pedals-clutch`|number|0 - 100|0 is no pressure and 100 is fully pressed.|
+|`pedals-gas`|number|0 - 1|0 is no pressure, 0.25 is quarter pressure, and 1 is fully pressed.|
+|`pedals-brake`|number|0 - 1|0 is no pressure, 0.25 is quarter pressure, and 1 is fully pressed.|
+|`pedals-clutch`|number|0 - 1|0 is no pressure, 0.25 is quarter pressure, and 1 is fully pressed.|
 
 Not enough events for you? Try subscribing to `all`, `changes`, or `data` for even more information.
 
