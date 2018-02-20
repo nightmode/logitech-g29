@@ -38,7 +38,9 @@ function display(val) {
 //----------------------------------
 // Distract the humans for a moment
 //----------------------------------
-console.log(chalk.cyan('Setting up wheel.\nOne moment please.'))
+console.log(chalk.cyan('Setting up wheel.'))
+console.log(chalk.cyan('One moment please.'))
+console.log(chalk.gray('If nothing happens, try moving the wheel.'))
 
 //-----------------------------------
 // Connect to Wheel and Setup Events

@@ -9,6 +9,9 @@ var chalk = require('chalk')
 console.log()
 console.log(chalk.cyan('Play with your G29 to make sure each feature works perfectly.'))
 console.log()
+console.log(chalk.cyan('Setting up wheel.'))
+console.log(chalk.cyan('One moment please.'))
+console.log(chalk.gray('If nothing happens, try moving the wheel.'))
 
 //----------------
 // Includes: Self
