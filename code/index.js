@@ -163,10 +163,13 @@ function findWheel() {
     var devicePath = ''
 
     for (var i in devices) {
-        // devices[i].product will be set to 'G29 Driving Force Racing Wheel' on Windows and Mac. Linux will not have this key.
+        // devices[i].vendorId seems to be the only completely reliable property on each OS.
+        // devices[i].productId can not be trusted and can sometimes be wildly different.
+        // devices[i].product should be set to 'G29 Driving Force Racing Wheel'.
         // devices[i].interface should be 0 on Windows and Linux.
         // devices[i].usagePage should be 1 on Windows and Mac.
-        if (devices[i].vendorId === 1133 && devices[i].productId === 49743 &&
+        if (devices[i].vendorId === 1133 &&
+            (devices[i].productId === 49743 || devices[i].product === 'G29 Driving Force Racing Wheel') &&
             (devices[i].interface === 0 || devices[i].usagePage === 1)) {
             devicePath = devices[i].path
             break
