@@ -68,8 +68,7 @@ Vroom vroom sounds optional but encouraged. ^\_^
 
 Looking to contribute? Here are some ideas to get you started.
 
-* [Report any issues](https://github.com/ForestMist/logitech-g29/issues) on GitHub.
-* Contact [Daniel](https://forestmist.org/about/) with improvement ideas and/or send a [pull request](https://github.com/ForestMist/logitech-g29/pulls).
+* [Report any issues](https://github.com/kai-nightmode/logitech-g29/issues) on GitHub.
 * Hook up your G29 wheel to something on the internet and wow the IoT community.
 * Share this library with other Logitech loving folks.
 
@@ -77,4 +76,4 @@ Not sure where you can help? Don't worry. Just by using this library, you are ma
 
 ## License
 
-MIT © [Daniel Gagan](https://forestmist.org)
+MIT © [Kai Nightmode](https://forestmist.org)
