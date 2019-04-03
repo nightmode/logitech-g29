@@ -2,7 +2,7 @@
 
 # Logitech G29 Racing Wheel for Node
 
-Bring your [Logitech G29 Racing Wheel](http://gaming.logitech.com/en-us/product/g29-driving-force) into the wonderful world of [Node](https://nodejs.org/en/).
+Bring your [Logitech G29 Racing Wheel](https://www.logitechg.com/en-us/products/driving/driving-force-racing-wheel.html) into the wonderful world of [Node](https://nodejs.org/en/).
 
 * Subscribe to wheel, pedal, and shifter events.
 * Activate simple force feedback effects.
