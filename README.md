@@ -1,4 +1,4 @@
-<img src="https://raw.githubusercontent.com/ForestMist/logitech-g29/master/images/header.png" width="888" alt="">
+<img src="https://raw.githubusercontent.com/kai-nightmode/logitech-g29/master/images/header.png" width="888" alt="">
 
 # Logitech G29 Racing Wheel for Node
 
