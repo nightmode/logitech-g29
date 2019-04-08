@@ -6,7 +6,7 @@
   "author": "Kai Nightmode",
   "repository": {
     "type": "git",
-    "url": "git://github.com/kai-nightmode/logitech-g29.git"
+    "url": "git://github.com/nightmode/logitech-g29.git"
   },
   "main": "./code/index.js",
   "dependencies": {

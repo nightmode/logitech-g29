@@ -1,4 +1,4 @@
-<img src="https://raw.githubusercontent.com/kai-nightmode/logitech-g29/master/images/header.png" width="888" alt="">
+<img src="https://raw.githubusercontent.com/nightmode/logitech-g29/master/images/header.png" width="888" alt="">
 
 # Logitech G29 Racing Wheel for Node
 
@@ -68,7 +68,7 @@ Vroom vroom sounds optional but encouraged. ^\_^
 
 Looking to contribute? Here are some ideas to get you started.
 
-* [Report any issues](https://github.com/kai-nightmode/logitech-g29/issues) on GitHub.
+* [Report any issues](https://github.com/nightmode/logitech-g29/issues) on GitHub.
 * Hook up your G29 wheel to something on the internet and wow the IoT community.
 * Share this library with other Logitech loving folks.
 
