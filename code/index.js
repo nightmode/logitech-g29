@@ -3,12 +3,12 @@
 //----------------
 // Includes: Self
 //----------------
-var dataMap = require('./data-map')
+var color   = require('./color.js')
+var dataMap = require('./data-map.js')
 
 //----------
 // Includes
 //----------
-var chalk = require('chalk')
 var events = require('events')
 var hid = require('node-hid')
 var os = require('os')
@@ -107,7 +107,7 @@ function connect(odo, callback) { // Constable Odo takes many forms.
     device.read(function(err, data) {
         if (err) {
             if (options.debug) {
-                console.log(chalk.red('connect -> Error reading from device.'), err)
+                console.log(color.red('connect -> Error reading from device.'), err)
             }
             callback(err)
         } else {
@@ -117,7 +117,7 @@ function connect(odo, callback) { // Constable Odo takes many forms.
                 // wheel is already in high precision mode
 
                 if (options.debug) {
-                    console.log(chalk.cyan('connect -> Wheel already in high precision mode.'))
+                    console.log(color.cyan('connect -> Wheel already in high precision mode.'))
                 }
 
                 listen(true, callback)
@@ -125,7 +125,7 @@ function connect(odo, callback) { // Constable Odo takes many forms.
                 // wheel is not in high precision mode
 
                 if (options.debug) {
-                    console.log(chalk.cyan('connect -> Initing'))
+                    console.log(color.cyan('connect -> Initing'))
                 }
 
                 try {
@@ -178,11 +178,11 @@ function findWheel() {
 
     if (devicePath === '') {
         if (options.debug) {
-            console.log(chalk.yellow('findWheel -> Oops, could not find a G29 Wheel. Is it plugged in?\n'))
+            console.log(color.yellow('findWheel -> Oops, could not find a G29 Wheel. Is it plugged in?\n'))
             process.exit()
         }
     } else if (options.debug) {
-        console.log(chalk.cyan('findWheel -> Found G29 Wheel at ') + devicePath)
+        console.log(color.cyan('findWheel -> Found G29 Wheel at ') + devicePath)
     }
 
     return devicePath
@@ -250,7 +250,7 @@ function userOptions(opt) {
     }
 
     if (options.debug) {
-        console.log(chalk.cyan('userOptions -> '), options)
+        console.log(color.cyan('userOptions -> '), options)
     }
 } // userOptions
 
@@ -510,14 +510,14 @@ function listen(ready, callback) {
 
     device.on("error", function(err) {
         if (options.debug) {
-            console.log(chalk.red('device error -> '), JSON.stringify(err), err)
+            console.log(color.red('device error -> '), JSON.stringify(err), err)
         }
     })
 
     leds(0)
 
     if (options.debug) {
-        console.log(chalk.cyan('listen -> listening'))
+        console.log(color.cyan('listen -> listening'))
     }
 
     callback(null)

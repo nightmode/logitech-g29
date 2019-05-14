@@ -1,8 +1,8 @@
 //----------
 // Includes
 //----------
-var chalk = require('chalk')
-var g = require('../code/index.js')
+var color = require('../code/color.js')
+var g     = require('../code/index.js')
 
 //-----------
 // Variables
@@ -48,7 +48,7 @@ function setForceConstant() {
     }
 
     if (direction !== lastDirection) {
-        console.log(chalk.gray('forceConstant(' + direction + ')'))
+        console.log(color.gray('forceConstant(' + direction + ')'))
 
         g.forceConstant(direction)
 
@@ -70,7 +70,7 @@ function setForceFriction(val) {
     if (lastFriction < 0) lastFriction = 0
     if (lastFriction > 1) lastFriction = 1
 
-    console.log(chalk.gray('forceFriction(' + lastFriction + ')'))
+    console.log(color.gray('forceFriction(' + lastFriction + ')'))
 
     g.forceFriction(lastFriction)
 } // setForceFriction
@@ -78,9 +78,9 @@ function setForceFriction(val) {
 //----------------------------------
 // Distract the humans for a moment
 //----------------------------------
-console.log(chalk.cyan('Setting up wheel.'))
-console.log(chalk.cyan('One moment please.'))
-console.log(chalk.gray('If nothing happens, try moving the wheel.'))
+console.log(color.cyan('Setting up wheel.'))
+console.log(color.cyan('One moment please.'))
+console.log(color.gray('If nothing happens, try moving the wheel.'))
 
 //-----------------------------------
 // Connect to Wheel and Setup Events
@@ -128,11 +128,11 @@ g.connect(wheelOptions, function(err) {
         }
     })
 
-    console.log(chalk.cyan('Wheel ready.'))
+    console.log(color.cyan('Wheel ready.'))
     console.log()
-    console.log(chalk.green('Play with forceConstant() by using the Clutch, Brake, and Gas pedals.'))
+    console.log(color.green('Play with forceConstant() by using the Clutch, Brake, and Gas pedals.'))
     console.log()
-    console.log(chalk.green('Play with forceFriction() by using the Red Spinner. Rotate right for more, left for less, and press the spinner button to reset.'))
+    console.log(color.green('Play with forceFriction() by using the Red Spinner. Rotate right for more, left for less, and press the spinner button to reset.'))
     console.log()
 
     // monitor over time

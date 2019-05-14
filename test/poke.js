@@ -1,22 +1,18 @@
 //----------
 // Includes
 //----------
-var chalk = require('chalk')
+var color = require('../code/color.js')
+var g     = require('../code/index.js')
 
 //----------------
 // Intended Usage
 //----------------
-console.log(chalk.cyan('Intended Usage'))
+console.log(color.cyan('Intended Usage'))
 console.log()
 console.log('    node')
 console.log('    .load poke.js')
-console.log('    bits(data[0]) ' + chalk.gray('<- where 0 (thru 11) is the buffer item to inspect'))
+console.log('    bits(data[0]) ' + color.gray('<- where 0 (thru 11) is the buffer item to inspect'))
 console.log()
-
-//----------------
-// Includes: Self
-//----------------
-var g = require('./../code/index.js')
 
 //-----------
 // Functions

@@ -1,18 +1,18 @@
 //----------
 // Includes
 //----------
-var chalk = require('chalk')
-var g = require('../code/index.js')
+var color = require('../code/color.js')
+var g     = require('../code/index.js')
 
 //-----------
 // Variables
 //-----------
-displayNone  = chalk.black('*****')
-displayOne   = chalk.green('*') + chalk.black('****')
-displayTwo   = chalk.green('**') + chalk.black('***')
-displayThree = chalk.green('**') + chalk.yellow('*') + chalk.black('**')
-displayFour  = chalk.green('**') + chalk.yellow('**') + chalk.black('*')
-displayFive  = chalk.green('**') + chalk.yellow('**') + chalk.red('*')
+displayNone  = color.black('*****')
+displayOne   = color.green('*') + color.black('****')
+displayTwo   = color.green('**') + color.black('***')
+displayThree = color.green('**') + color.yellow('*') + color.black('**')
+displayFour  = color.green('**') + color.yellow('**') + color.black('*')
+displayFive  = color.green('**') + color.yellow('**') + color.red('*')
 
 //-----------
 // Functions
@@ -38,9 +38,9 @@ function display(val) {
 //----------------------------------
 // Distract the humans for a moment
 //----------------------------------
-console.log(chalk.cyan('Setting up wheel.'))
-console.log(chalk.cyan('One moment please.'))
-console.log(chalk.gray('If nothing happens, try moving the wheel.'))
+console.log(color.cyan('Setting up wheel.'))
+console.log(color.cyan('One moment please.'))
+console.log(color.gray('If nothing happens, try moving the wheel.'))
 
 //-----------------------------------
 // Connect to Wheel and Setup Events
@@ -51,6 +51,6 @@ g.connect(function(err) {
         g.leds(val)
     })
 
-    console.log(chalk.cyan('Wheel ready.'))
-    console.log(chalk.green('Press the gas pedal to see if your wheel LEDs animate.'))
+    console.log(color.cyan('Wheel ready.'))
+    console.log(color.green('Press the gas pedal to see if your wheel LEDs animate.'))
 })
