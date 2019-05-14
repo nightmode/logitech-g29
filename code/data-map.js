@@ -119,7 +119,7 @@ function dataMap(dataDiffPositions, data, memory) {
     @param   {Object}  memory             Memory object to modify.
     @return  {Object}  memory             Modified memory object.
     */
-    for (var i in dataDiffPositions) {
+    for (let i in dataDiffPositions) {
         switch (dataDiffPositions[i]) {
             case 0:
                 memory = wheelDpad(data, memory)
@@ -166,7 +166,7 @@ function reduceNumberFromTo(num, to) {
     */
     to = to * 2
 
-    var y = 128
+    let y = 128
 
     while (y > 1) {
         if (num < to) {
@@ -214,7 +214,7 @@ function round(num, exp) {
 // Functions: Wheel
 //------------------
 function wheelButtonPlus(data, memory) {
-    var d = data[2]
+    let d = data[2]
 
     memory.wheel.button_plus = (d & 128) ? 1 : 0
 
@@ -222,7 +222,7 @@ function wheelButtonPlus(data, memory) {
 } // wheelButtonPlus
 
 function wheelButtons(data, memory) {
-    var d = data[1]
+    let d = data[1]
 
     memory.wheel.button_r2 = (d & 4) ? 1 : 0
     memory.wheel.button_l2 = (d & 8) ? 1 : 0
@@ -236,7 +236,7 @@ function wheelButtons(data, memory) {
 } // wheelButtons
 
 function wheelButtonsSymbols(data, memory) {
-    var d = data[0]
+    let d = data[0]
 
     memory.wheel.button_x = (d & 16) ? 1 : 0
     memory.wheel.button_square = (d & 32) ? 1 : 0
@@ -247,7 +247,7 @@ function wheelButtonsSymbols(data, memory) {
 } // wheelButtonsSymbols
 
 function wheelDpad(data, memory) {
-    var dpad = reduceNumberFromTo(data[0], 8)
+    let dpad = reduceNumberFromTo(data[0], 8)
 
     switch (dpad) {
         case 8:
@@ -291,7 +291,7 @@ function wheelDpad(data, memory) {
 } // wheelDpad
 
 function wheelShiftPedals(data, memory) {
-    var d = data[1]
+    let d = data[1]
 
     memory.wheel.shift_right = d & 1
     memory.wheel.shift_left = (d & 2) ? 1 : 0
@@ -300,7 +300,7 @@ function wheelShiftPedals(data, memory) {
 } // wheelShiftPedals
 
 function wheelSpinnerAndButtons(data, memory) {
-    var d = data[3]
+    let d = data[3]
 
     memory.wheel.button_minus = d & 1
 
@@ -319,13 +319,13 @@ function wheelSpinnerAndButtons(data, memory) {
 } // wheelSpinnerAndButtons
 
 function wheelTurn(data, memory) {
-    var wheelCourse = data[5] // 0-255
-    var wheelFine = data[4] // 0-255
+    let wheelCourse = data[5] // 0-255
+    let wheelFine = data[4] // 0-255
 
     wheelCourse = wheelCourse / 255 * 99 // 99 instead of 100 so wheelCourse and wheelFine add up to 100% when they are both maxed out
     wheelFine = wheelFine / 255
 
-    var wheel = round(wheelCourse + wheelFine, 2)
+    let wheel = round(wheelCourse + wheelFine, 2)
 
     if (wheel > 100) wheel = 100
 
@@ -369,7 +369,7 @@ function pedalToPercent(num) {
 // Functions: Shifter
 //--------------------
 function shifterGear(data, memory) {
-    var stick = data[2]
+    let stick = data[2]
 
     stick = reduceNumberFromTo(stick, 64)
 

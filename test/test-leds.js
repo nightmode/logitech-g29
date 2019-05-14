@@ -1,18 +1,18 @@
 //----------
 // Includes
 //----------
-var color = require('../code/color.js')
-var g     = require('../code/index.js')
+const color = require('../code/color.js')
+const g     = require('../code/index.js')
 
 //-----------
 // Variables
 //-----------
-displayNone  = color.black('*****')
-displayOne   = color.green('*') + color.black('****')
-displayTwo   = color.green('**') + color.black('***')
-displayThree = color.green('**') + color.yellow('*') + color.black('**')
-displayFour  = color.green('**') + color.yellow('**') + color.black('*')
-displayFive  = color.green('**') + color.yellow('**') + color.red('*')
+const displayNone  = color.black('*****')
+const displayOne   = color.green('*') + color.black('****')
+const displayTwo   = color.green('**') + color.black('***')
+const displayThree = color.green('**') + color.yellow('*') + color.black('**')
+const displayFour  = color.green('**') + color.yellow('**') + color.black('*')
+const displayFive  = color.green('**') + color.yellow('**') + color.red('*')
 
 //-----------
 // Functions

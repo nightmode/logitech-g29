@@ -3,24 +3,31 @@
 //----------------
 // Includes: Self
 //----------------
-var color   = require('./color.js')
-var dataMap = require('./data-map.js')
+const color   = require('./color.js')
+const dataMap = require('./data-map.js')
 
 //----------
 // Includes
 //----------
-var events = require('events')
-var hid = require('node-hid')
-var os = require('os')
+const events = require('events')
+const hid = require('node-hid')
+const os = require('os')
 
 //-----------
 // Variables
 //-----------
-var dataPrev = Array(12)
-var device = ''
-var eventEmitter = new events.EventEmitter()
-var ledPrev = []
-var memoryPrev = {
+const eventEmitter = new events.EventEmitter()
+const options = {
+    'autocenter': true,
+    'debug': false,
+    'range': 900
+}
+const platform = os.platform()
+
+let dataPrev = Array(12)
+let device = ''
+let ledPrev = []
+let memoryPrev = {
     'wheel': {
         'turn': 50,
         'shift_left': 0,
@@ -51,13 +58,7 @@ var memoryPrev = {
         'clutch': 0
     }
 }
-var options = {
-    'autocenter': true,
-    'debug': false,
-    'range': 900
-}
-var platform = os.platform()
-var prependWrite = false
+let prependWrite = false
 
 //-------------
 // OS Specific
@@ -79,9 +80,9 @@ function clone(obj) {
         return obj
     }
 
-    var temp = obj.constructor()
+    const temp = obj.constructor()
 
-    for (var key in obj) {
+    for (let key in obj) {
         temp[key] = clone(obj[key])
     }
 
@@ -159,10 +160,10 @@ function findWheel() {
     Return the USB location of a Logitech G29 wheel.
     @return  {String}  devicePath  USB path like: USB_046d_c294_fa120000
     */
-    var devices = hid.devices()
-    var devicePath = ''
+    const devices = hid.devices()
+    let devicePath = ''
 
-    for (var i in devices) {
+    for (let i in devices) {
         // devices[i].vendorId seems to be the only completely reliable property on each OS.
         // devices[i].productId can not be trusted and can sometimes be wildly different.
         // devices[i].product should be set to 'G29 Driving Force Racing Wheel'.
@@ -230,8 +231,8 @@ function setRange() {
         options.range = 900
     }
 
-    var range1 = options.range & 0x00ff
-    var range2 = (options.range & 0xff00) >> 8
+    const range1 = options.range & 0x00ff
+    const range2 = (options.range & 0xff00) >> 8
 
     relayOS([0xf8, 0x81, range1, range2, 0x00, 0x00, 0x00])
 } // setRange
@@ -243,7 +244,7 @@ function userOptions(opt) {
     */
     if (typeof opt !== 'object') return;
 
-    for (var i in options) {
+    for (let i in options) {
         if (opt.hasOwnProperty(i)) {
             options[i] = opt[i]
         }
@@ -298,18 +299,18 @@ function leds(setting) {
             return
         }
 
-        var ledValues = [1, 2, 4, 8, 16]
+        const ledValues = [1, 2, 4, 8, 16]
 
-        var ledArray = setting
+        const ledArray = setting
 
         // remove any extra elements
         ledArray.splice(5, ledArray.length - 5)
 
-        var len = ledArray.length
+        const len = ledArray.length
 
         setting = 0
 
-        for (var i = 0; i < len; i++) {
+        for (let i = 0; i < len; i++) {
             if (parseInt(ledArray[i]) === 1) {
                 setting = setting + ledValues[i]
             }
@@ -348,7 +349,7 @@ function autoCenter() {
     /*
     Set wheel autocentering based on existing options.
     */
-    var option = options.autocenter
+    const option = options.autocenter
 
     if (option) {
         // auto-center on
@@ -450,14 +451,14 @@ function listen(ready, callback) {
 
     device.on("data", function(data) {
         // reset memory
-        var memory = clone(memoryPrev)
-        var memoryCache = clone(memoryPrev)
+        let memory = clone(memoryPrev)
+        const memoryCache = clone(memoryPrev)
 
-        var dataDiffPositions = []
+        const dataDiffPositions = []
 
         // find out if anything has changed since the last event
-        var dataLength = data.length
-        for (var i = 0; i < dataLength; i++) {
+        const dataLength = data.length
+        for (let i = 0; i < dataLength; i++) {
             if (data[i] !== dataPrev[i]) {
                 dataDiffPositions.push(i)
             }
@@ -472,11 +473,11 @@ function listen(ready, callback) {
         //-------------------------
         // Figure out what changed
         //-------------------------
-        var memoryDiff = {}
-        var count = 0
+        const memoryDiff = {}
+        let count = 0
 
-        for (var o in memoryCache) {
-            for (var y in memory[o]) {
+        for (let o in memoryCache) {
+            for (let y in memory[o]) {
                 if (memory[o][y] != memoryCache[o][y]) {
                     if (!memoryDiff.hasOwnProperty(o)) {
                         memoryDiff[o] = {}

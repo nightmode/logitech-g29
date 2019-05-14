@@ -1,8 +1,8 @@
 //----------
 // Includes
 //----------
-var color = require('../code/color.js')
-var g     = require('../code/index.js')
+const color = require('../code/color.js')
+const g     = require('../code/index.js')
 
 //----------------
 // Intended Usage
@@ -27,8 +27,8 @@ function bits(x) {
     * @return {Array} bitmap array
     */
 
-    var data = [],
-        tmp = x
+    let data = []
+    let tmp = x
 
     if (typeof x === 'undefined') {
         return data
@@ -36,7 +36,7 @@ function bits(x) {
 
     // Check for binary string
     if (typeof x === 'string') {
-        for (var i = 0; i < x.length; i++) {
+        for (let i = 0; i < x.length; i++) {
             data.push(+x[i])
         }
         return data.reverse()
@@ -59,7 +59,7 @@ function bits(x) {
     }
 
     // Assumed to be array / buffer of 32bit integers
-    for (var i = 0; i < x.length; i++) {
+    for (let i = 0; i < x.length; i++) {
         data = data.concat(bits(x[i]))
     }
 
@@ -75,14 +75,14 @@ function octet(arr) {
      * @param {Array} target
      * @return {Array} zero filled octet array
      */
-    var len = arr.length,
-        fill = len + (8 - len % 8)
+    const len = arr.length
+    const fill = len + (8 - len % 8)
 
     if (len !== 0 && len % 8 === 0) {
         return arr
     }
 
-    for (var i = len; i < fill; i++) {
+    for (let i = len; i < fill; i++) {
         arr[i] = 0
     }
 
@@ -100,7 +100,7 @@ process.on('SIGINT', function() {
 //-----------
 // Variables
 //-----------
-var data = ''
+let data = ''
 
 //---------
 // Connect

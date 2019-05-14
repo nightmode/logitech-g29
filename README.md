@@ -34,7 +34,7 @@ KERNEL=="hidraw*", SUBSYSTEM=="hidraw", MODE="0664", GROUP="plugdev"
 Let's have some fun and make our wheel LEDs light up when we press the gas pedal.
 
 ```js
-var g = require('logitech-g29')
+const g = require('logitech-g29')
 
 g.connect(function(err) {
     g.on('pedals-gas', function(val) {

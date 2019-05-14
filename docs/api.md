@@ -32,7 +32,7 @@ g.connect(function(err) {
 Connect with `options`.
 
 ```js
-var options = {
+const options = {
   autocenter: false,
   range: 270
 }

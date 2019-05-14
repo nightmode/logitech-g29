@@ -1,8 +1,8 @@
 //----------
 // Includes
 //----------
-var color = require('../code/color.js')
-var g     = require('../code/index.js')
+const color = require('../code/color.js')
+const g     = require('../code/index.js')
 
 //--------------
 // Instructions
@@ -25,7 +25,7 @@ process.on('SIGINT', function() {
 //-----------
 // Variables
 //-----------
-var options = {
+const options = {
     debug: true
 }
 

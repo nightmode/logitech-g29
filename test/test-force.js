@@ -1,27 +1,27 @@
 //----------
 // Includes
 //----------
-var color = require('../code/color.js')
-var g     = require('../code/index.js')
+const color = require('../code/color.js')
+const g     = require('../code/index.js')
 
 //-----------
 // Variables
 //-----------
-var defaults = {
+const defaults = {
     forceConstant: 0.5, // 0 = full left, 0.5 = no force, 1 = full right
     forceFriction: 0    // 0 = no friction, 0.5 = half strength, 1 = full strength
 }
 
-var lastDirection = defaults.forceConstant
-var lastFriction = defaults.forceFriction
+let lastDirection = defaults.forceConstant
+let lastFriction = defaults.forceFriction
 
-var pedalStatus = {
+const pedalStatus = {
     brake: false, // boolean
     clutch: 0,    // 0-100
     gas: 0        // 0-100
 }
 
-var wheelOptions = {
+const wheelOptions = {
     autocenter: false,
     debug: false,
     range: 900
