@@ -18,7 +18,7 @@ const displayFive  = color.green('**') + color.yellow('**') + color.red('*')
 // Functions
 //-----------
 function display(val) {
-    val  = Math.round(val * 100)
+    val = Math.round(val * 100)
 
     if (val > 84) {
         console.log(displayFive)
