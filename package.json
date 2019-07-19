@@ -1,6 +1,6 @@
 {
   "name": "logitech-g29",
-  "version": "1.0.14",
+  "version": "1.0.15",
   "description": "Logitech G29 Racing Wheel for Node",
   "license": "MIT",
   "author": "Kai Nightmode",
@@ -10,10 +10,10 @@
   },
   "main": "./code/index.js",
   "dependencies": {
-    "node-hid": "0.7.7"
+    "node-hid": "0.7.9"
   },
   "engines": {
-    "node": ">=4.0.0"
+    "node": ">=8"
   },
   "scripts": {
     "test": "node test/test.js"
