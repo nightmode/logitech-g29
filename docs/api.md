@@ -248,4 +248,4 @@ g.relayOS([0xf8, 0x12, 0x1f, 0x00, 0x00, 0x00, 0x01])
 
 ## License
 
-MIT © [Kai Nightmode](https://forestmist.org)
+MIT © [Kai Nightmode](https://twitter.com/kai_nightmode)

@@ -11,13 +11,13 @@ Bring your [Logitech G29 Racing Wheel](https://www.logitechg.com/en-us/products/
 
 ## Requirements
 
-[Node](https://nodejs.org/en/) version 4.0.0 or greater.
+[Node](https://nodejs.org/en/) version 8 or greater.
 
 Make sure your wheel's [platform mode switch](http://support.logitech.com/en_us/article/Set-the-G29-racing-wheel-for-Playstation-4-Playstation-3-or-PC-platforms?product=a0qi0000006PmxKAAS) is set to PS3.
 
 ## Install
 
-This library uses [node-hid](https://github.com/node-hid/node-hid) behind the scenes. If your OS and Node version are listed under [platform support](https://github.com/node-hid/node-hid/blob/master/README.md#platform-support) then you'll have the easiest install experience. If not, you may need to consult node-hid's [compiling from source](https://github.com/node-hid/node-hid#compiling-from-source) guide.
+This library uses [node-hid](https://github.com/node-hid/node-hid) behind the scenes. Depending on your OS and Node version, you may have an effortless install. If not, you may want to consult node-hid's [compiling from source](https://github.com/node-hid/node-hid#compiling-from-source) guide for assistance.
 
 ```
 npm install logitech-g29
@@ -64,16 +64,15 @@ Vroom vroom sounds optional but encouraged. ^\_^
   * [relay](docs/api.md#relay)
   * [relayOS](docs/api.md#relayos)
 
-## Contribute
+## Support
 
-Looking to contribute? Here are some ideas to get you started.
+Help [support this project](https://www.patreon.com/nightmode) on Patreon. Help me caretake and craft new software, videos, and interactive art. All for as little as $1 a month.
+
+In addition to Patreon, here are some other ways you can help this project.
 
 * [Report any issues](https://github.com/nightmode/logitech-g29/issues) on GitHub.
-* Hook up your G29 wheel to something on the internet and wow the IoT community.
-* Share this library with other Logitech loving folks.
-
-Not sure where you can help? Don't worry. Just by using this library, you are making the world a neater place. ^\_^
+* Share your G29 wheel creation on social media to inspire others.
 
 ## License
 
-MIT © [Kai Nightmode](https://forestmist.org)
+MIT © [Kai Nightmode](https://twitter.com/kai_nightmode)
