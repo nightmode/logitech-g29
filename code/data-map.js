@@ -322,8 +322,8 @@ function wheelTurn(data, memory) {
     let wheelCourse = data[5] // 0-255
     let wheelFine = data[4] // 0-255
 
-    wheelCourse = wheelCourse / 255 * 99 // 99 instead of 100 so wheelCourse and wheelFine add up to 100% when they are both maxed out
-    wheelFine = wheelFine / 255
+    wheelCourse = wheelCourse / 255 * ( 100 - ( 100 / 256 )) // instead of 100 so wheelCourse and wheelFine add up to 100% when they are both maxed out
+    wheelFine = wheelFine / 255 * ( 100 / 256 ) // multiplied on this coefficient because of difference between an adjacent values is not 1
 
     let wheel = round(wheelCourse + wheelFine, 2)
 
