@@ -13,7 +13,7 @@ Bring your [Logitech G29 Racing Wheel](https://www.logitechg.com/en-us/products/
 
 [Node](https://nodejs.org/en/) version 8 or greater.
 
-Make sure your wheel's [platform mode switch](http://support.logitech.com/en_us/article/Set-the-G29-racing-wheel-for-Playstation-4-Playstation-3-or-PC-platforms?product=a0qi0000006PmxKAAS) is set to PS3.
+Make sure the Logitech G29 mode switch is set to PS3. The switch is located above the middle of the steering wheel.
 
 ## Install
 
