@@ -10,7 +10,7 @@
   },
   "main": "./code/index.js",
   "dependencies": {
-    "node-hid": "0.7.9"
+    "node-hid": "1.2.0"
   },
   "engines": {
     "node": ">=8"
