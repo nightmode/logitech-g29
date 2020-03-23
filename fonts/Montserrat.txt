@@ -1,0 +1,3 @@
+The Montserrat font is used inside the header and event-map images in the "/images" folder.
+
+The Montserrat font was sourced from https://www.fontsquirrel.com/fonts/montserrat
