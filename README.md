@@ -23,7 +23,9 @@ This library uses [node-hid](https://github.com/node-hid/node-hid) behind the sc
 npm install logitech-g29
 ```
 
-[Ubuntu](http://www.ubuntu.com/desktop) users will most likely want to remove the `sudo` requirement of interfacing with the wheel. This can be easily accomplished by creating a file at `/etc/udev/rules.d/99-hidraw-permissions.rules` with the following code. After saving the file, reboot and then you can move on to more fun tasks.
+Windows users who are having trouble connecting to a wheel may need to run the [Logitech G Hub](https://www.logitechg.com/en-us/innovation/g-hub.html) software one time to setup drivers.
+
+[Ubuntu](http://www.ubuntu.com/desktop) users will most likely want to remove the `sudo` requirement of interfacing with the wheel. This can be accomplished by creating a file at `/etc/udev/rules.d/99-hidraw-permissions.rules` with the following code. After saving the file, reboot and then you can move on to more fun tasks.
 
 ```
 KERNEL=="hidraw*", SUBSYSTEM=="hidraw", MODE="0664", GROUP="plugdev"
