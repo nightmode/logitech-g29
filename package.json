@@ -9,6 +9,10 @@
   "engines": {
     "node": ">=8"
   },
+  "funding": {
+    "type": "patreon",
+    "url": "https://www.patreon.com/nightmode"
+  },
   "keywords": [
     "logitech",
     "g29",
