@@ -223,8 +223,8 @@ function setRange() {
     /*
     Set wheel range.
     */
-    if (options.range < 270) {
-        options.range = 270
+    if (options.range < 40) {
+        options.range = 40
     }
 
     if (options.range > 900) {

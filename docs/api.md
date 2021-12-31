@@ -56,7 +56,7 @@ The following options can be set when using `connect(options, callback)`.
 
 `debug` enables a lot of console logging.
 
-`range` is a number from 270 to 900. Range sets the degrees of turn it takes before the wheel reports a maximum value for that direction. For example, if the range is 270, it won't take much turning before you receive a min or max return value. Even if you can physically turn the wheel more in the same direction, the return value will be the same.
+`range` is normally number from 270 to 900 although you can go as low as 40. Range sets the degrees of turn it takes before the wheel reports a maximum value for that direction. For example, if the range is 270, it won't take much turning before you receive a min or max return value. Even if you can physically turn the wheel more in the same direction, the return value will be the same.
 
 ## events
 
