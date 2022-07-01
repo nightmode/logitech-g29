@@ -66,14 +66,9 @@ Vroom vroom sounds optional but encouraged. ^\_^
   * [relay](docs/api.md#relay)
   * [relayOS](docs/api.md#relayos)
 
-## Support
+## Donate
 
-Help [support this project](https://www.patreon.com/nightmode) on Patreon. Help me caretake and craft new software, videos, and interactive art. All for as little as $1 a month.
-
-In addition to Patreon, here are some other ways you can help this project.
-
-* [Report any issues](https://github.com/nightmode/logitech-g29/issues) on GitHub.
-* Share your G29 wheel creation on social media to inspire others.
+Buy me [Bubble Tea](https://ko-fi.com/kai_nightmode). Support my work and get the ability to send me private messages on Ko-fi. ^_^
 
 ## License
 
