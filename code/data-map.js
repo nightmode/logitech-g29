@@ -113,7 +113,7 @@ Details on each item of the read buffer provided by node-hid for the Logitech G2
 //-----------
 function dataMap(dataDiffPositions, data, memory) {
     /*
-    Figure out what has changed since the last event and call relevent functions to translate those changes to a memory object.
+    Figure out what has changed since the last event and call relevant functions to translate those changes to a memory object.
     @param   {Object}  dataDiffPositions  An array.
     @param   {Buffer}  data               Buffer data from a node-hid event.
     @param   {Object}  memory             Memory object to modify.

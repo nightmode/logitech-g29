@@ -55,7 +55,7 @@ function setupColors() {
     }
 
     if (platform === 'win32' || platform === 'win64') {
-        // use brigher versions of these colors
+        // use brighter versions of these colors
         color.red     = color.redBright
         color.green   = color.greenBright
         color.yellow  = color.yellowBright

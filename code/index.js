@@ -260,7 +260,7 @@ function userOptions(opt) {
 //----------------
 function leds(setting) {
     /*
-    Control the shift indicator LEDs using a variety of convience methods.
+    Control the shift indicator LEDs using a variety of convenience methods.
     @param  {*}  setting  String, Number, or Array setting. Optional. See API documentation for more info.
     */
 
@@ -394,7 +394,7 @@ function forceConstant(number) {
 
 function forceFriction(number) {
     /*
-    Set or disable the ammount of friction present when turning the wheel.
+    Set or disable the amount of friction present when turning the wheel.
     @param  {Number}  number  Number between 0 and 1. Optional.
     */
     if (typeof number === 'undefined') number = 0
