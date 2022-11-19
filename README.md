@@ -72,4 +72,4 @@ Buy me [Bubble Tea](https://ko-fi.com/kai_nightmode). Support my work and get th
 
 ## License
 
-MIT © [Kai Nightmode](https://twitter.com/kai_nightmode)
+MIT © [Kai Nightmode](https://nightmode.fm/)
