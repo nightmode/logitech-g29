@@ -21,11 +21,16 @@
   ],
   "license": "MIT",
   "main": "./code/index.js",
+  "types": "./code/index.d.ts",
   "repository": {
     "type": "git",
     "url": "git://github.com/nightmode/logitech-g29.git"
   },
   "scripts": {
     "test": "node test/test.js"
+  },
+  "devDependencies": {
+    "@types/node": "^20.6.3",
+    "typescript": "^5.2.2"
   }
 }
