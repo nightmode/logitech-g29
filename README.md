@@ -66,10 +66,8 @@ Vroom vroom sounds optional but encouraged. ^\_^
   * [relay](docs/api.md#relay)
   * [relayOS](docs/api.md#relayos)
 
-## Donate
-
-This software may be free but my love of loose leaf tea is not. Donate to [support my work](https://ko-fi.com/kai_nightmode) and unlock private messages on Ko-fi.
-
 ## License
 
-MIT © [Kai Nightmode](https://nightmode.fm/)
+[CC0 1.0 Universal](https://creativecommons.org/publicdomain/zero/1.0/)
+
+This work has been marked as dedicated to the public domain.
