@@ -4,10 +4,10 @@
   "version": "2.0.0",
   "author": "Kai Nightmode",
   "dependencies": {
-    "node-hid": "2.1.2"
+    "node-hid": "3.1.2"
   },
   "engines": {
-    "node": ">=8"
+    "node": ">=10.16"
   },
   "keywords": [
     "logitech",
