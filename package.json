@@ -1,7 +1,7 @@
 {
   "name": "logitech-g29",
   "description": "Logitech G29 Racing Wheel for Node",
-  "version": "2.0.0",
+  "version": "3.0.0",
   "author": "Kai Nightmode",
   "dependencies": {
     "node-hid": "3.1.2"
