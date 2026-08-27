@@ -1,26 +1,15 @@
 {
   "name": "logitech-g29",
   "description": "Logitech G29 Racing Wheel for Node",
-  "version": "3.0.1",
-  "author": "Kai Nightmode",
+  "version": "3.1.0",
   "dependencies": {
     "node-hid": ">=3.1.2"
   },
   "engines": {
     "node": ">=10.16"
   },
-  "keywords": [
-    "logitech",
-    "g29",
-    "racing wheel",
-    "hid"
-  ],
   "license": "CC0-1.0",
   "main": "./code/index.js",
-  "repository": {
-    "type": "git",
-    "url": "git://github.com/nightmode/logitech-g29.git"
-  },
   "scripts": {
     "test": "node test/test.js"
   }

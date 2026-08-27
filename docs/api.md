@@ -114,7 +114,7 @@ Not enough events for you? Try subscribing to `all`, `changes`, or `data` for ev
 
 ### event map
 
-[![Event Map](https://raw.github.com/nightmode/logitech-g29/main/images/event-map.png)](https://raw.github.com/nightmode/logitech-g29/main/images/event-map.png)
+View `/images/event-map.png` for a visual representation.
 
 ### on
 

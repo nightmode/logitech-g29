@@ -1,10 +1,8 @@
-**This library is no longer being tested or updated as I no longer have access to the hardware.**
-
-<img src="https://raw.githubusercontent.com/nightmode/logitech-g29/main/images/header.png" width="830" alt="">
+**This software is no longer being tested or updated.**
 
 # Logitech G29 Racing Wheel for Node
 
-Bring your [Logitech G29 Racing Wheel](https://www.logitechg.com/en-us/products/driving/driving-force-racing-wheel.html) into the wonderful world of [Node](https://nodejs.org/en/).
+Bring your Logitech G29 Racing Wheel into the wonderful world of [Node](https://nodejs.org/en/).
 
 * Subscribe to wheel, pedal, and shifter events.
 * Activate simple force feedback effects.
@@ -13,21 +11,21 @@ Bring your [Logitech G29 Racing Wheel](https://www.logitechg.com/en-us/products/
 
 ## Requirements
 
-[Node](https://nodejs.org/en/) version 10.16 or the Node version required by any dependency, whichever is greater.
+Node version 10.16 or the Node version required by any dependency, whichever is greater.
 
 Make sure the Logitech G29 mode switch is set to PS3. The switch is located above the middle of the steering wheel.
 
 ## Install
 
-This library uses [node-hid](https://github.com/node-hid/node-hid) behind the scenes. Depending on your OS and Node version, you may have an effortless install. If not, you may want to consult node-hid's [compiling from source](https://github.com/node-hid/node-hid#compiling-from-source) guide for assistance.
+This library uses node-hid behind the scenes. Depending on your OS and Node version, you may have an effortless install. If not, you may want to consult node-hid's compiling from source guide for assistance.
 
 ```
-npm install logitech-g29
+npm install
 ```
 
-Windows users who are having trouble connecting to a wheel may need to run the [Logitech G Hub](https://www.logitechg.com/en-us/innovation/g-hub.html) software one time to setup drivers.
+Windows users who are having trouble connecting to a wheel may need to run the Logitech G Hub software one time to setup drivers.
 
-[Ubuntu](http://www.ubuntu.com/desktop) users will most likely want to remove the `sudo` requirement of interfacing with the wheel. This can be accomplished by creating a file at `/etc/udev/rules.d/99-hidraw-permissions.rules` with the following code. After saving the file, reboot and then you can move on to more fun tasks.
+Ubuntu users will most likely want to remove the `sudo` requirement of interfacing with the wheel. This can be accomplished by creating a file at `/etc/udev/rules.d/99-hidraw-permissions.rules` with the following code. After saving the file, reboot and then you can move on to more fun tasks.
 
 ```
 KERNEL=="hidraw*", SUBSYSTEM=="hidraw", MODE="0664", GROUP="plugdev"
